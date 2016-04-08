@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="TestApp">
+<head>
+<title>Programacion Avanzada - Práctica</title>
+<script src="../assets/angular.js"></script>
+<script src="../Controllers/TestController.js"></script>
+<meta charset="utf-8">
+
+</head>
+<body ng-controller="TestHttpController">
+		<h1>{{ "Probando Angular -http"}}</h1>
+		<input type="text" ng-model="newPost.title" placeholder="Título"><br>
+		<textarea ng-model="newPost.body" placeholder="Post"></textarea><br>
+		<button ng-click="addPost()">Enviar</button>
+		<hr>
+		<ul>
+			<li ng-repeat="post in posts">
+				<h2>{{post.title}}</h2>
+				<p> 
+					<strong>{{post.userId}}</strong> {{post.body}}
+				</p>
+			</li>
+		</ul>
+		
+</body>
+</html>
